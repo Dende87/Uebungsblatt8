@@ -21,23 +21,28 @@ public class Ant {
 		switch (direction) {
 		//Norden
 		case 0:
-			row = world.checkWorldSize(row - (int)(Math.random()*(5)+1));
+			row = world.checkWorldSize(row - 1);
+			//row = world.checkWorldSize(row - (int)(Math.random()*(5)+1));
 			break;
 		//Osten
 		case 1:
-			column = world.checkWorldSize(column + (int)(Math.random()*(5)+1));
+			column = world.checkWorldSize(column + 1);
+			//column = world.checkWorldSize(column + (int)(Math.random()*(5)+1));
 			break;
 		//Sueden
 		case 2:
-			row = world.checkWorldSize(row + (int)(Math.random()*(5)+1));
+			row = world.checkWorldSize(row + 1);
+			//row = world.checkWorldSize(row + (int)(Math.random()*(5)+1));
 			break;
 		//Westen
 		case 3:
-			column = world.checkWorldSize(column - (int)(Math.random()*(5)+1));
+			column = world.checkWorldSize(column - 1);
+			//column = world.checkWorldSize(column - (int)(Math.random()*(5)+1));
 			break;
 		default:
 			System.out.println("Direction not implemented!");
 		}
+		System.out.println("row: " + row + " " + "column: " + column);
 	}
 
 	private void ChangeDirection() {
@@ -47,8 +52,10 @@ public class Ant {
 			direction = ((direction - 1 < 0) ? 3 : direction - 1);
 		} else {
 			// weiß 90° nach rechts drehen
-			direction = ((direction + 1 > 3) ? 1 : direction + 1);
+			direction = ((direction + 1 > 3) ? 0 : direction + 1);
 		}
+		
+		System.out.println("direction: " + direction);
 	}
 
 }
