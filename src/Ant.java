@@ -21,23 +21,23 @@ public class Ant {
 		switch (direction) {
 		//Norden
 		case 0:
-			row = world.checkWorldSize(row - 1);
-			//row = world.checkWorldSize(row - (int)(Math.random()*(5)+1));
+			//row = world.checkWorldSize(row - 1);
+			row = world.checkWorldSize(row - (int)(Math.random()*(5)+1));
 			break;
 		//Osten
 		case 1:
-			column = world.checkWorldSize(column + 1);
-			//column = world.checkWorldSize(column + (int)(Math.random()*(5)+1));
+			//column = world.checkWorldSize(column + 1);
+			column = world.checkWorldSize(column + (int)(Math.random()*(5)+1));
 			break;
 		//Sueden
 		case 2:
-			row = world.checkWorldSize(row + 1);
-			//row = world.checkWorldSize(row + (int)(Math.random()*(5)+1));
+			//row = world.checkWorldSize(row + 1);
+			row = world.checkWorldSize(row + (int)(Math.random()*(5)+1));
 			break;
 		//Westen
 		case 3:
-			column = world.checkWorldSize(column - 1);
-			//column = world.checkWorldSize(column - (int)(Math.random()*(5)+1));
+			//column = world.checkWorldSize(column - 1);
+			column = world.checkWorldSize(column - (int)(Math.random()*(5)+1));
 			break;
 		default:
 			System.out.println("Direction not implemented!");
